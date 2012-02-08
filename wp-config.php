@@ -16,22 +16,42 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'specialtyrx');
+/*
+ * Unified variables
+ */
+$db_name = 'specialtyrx';
+$hostname = 'localhost';
+$charset = 'UTF-8';
+$collate = '';
+/*
+ * Check for the current environment
+ */
+if ($_SERVER["HTTP_HOST"] === 'specialtyrx.com') {
+  $user_name = 'root';
+  $password = 'root';
+} else if ($_SERVER["HTTP_HOST"] === 'localhost') {
+  $user_name = 'root';
+  $password = 'root';
+}
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('DB_NAME', $db_name);
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', $user_name);
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', $password);
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $hostname);
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', $chartset);
 
 /** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+define('DB_COLLATE', $collate);
 
 /**#@+
  * Authentication Unique Keys and Salts.

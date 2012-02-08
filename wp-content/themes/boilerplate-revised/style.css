@@ -372,7 +372,7 @@ Verdana, Tahoma, Geneva, sans-serif - t
 
 
 /********** NAVIGATION **********/
-#navigation {height:50px; background:blue;}
+#navigation {height:50px; background:yellow;}
 #navigation ul {margin:0; padding:0;}
 #navigation ul li {float:left; display:inline;}
 #navigation ul li a {display:block; text-decoration:none; padding:0 15px;}
